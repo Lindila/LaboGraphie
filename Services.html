@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services | Design, Web, Sécurité & Marketing – Labographie Yaoundé</title>
+    <meta name="description" content="Découvrez les services de Labographie : design & branding, développement web et mobile, cybersécurité, marketing digital, audit IT et maintenance informatique à Yaoundé.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Services – Labographie">
+    <meta property="og:description" content="Expertises Laboratoire + Cabinet : design, web, mobile, sécurité, marketing, audit et maintenance IT.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labographie.cm/Services.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    
+    /* Effet Liquid Glass */
+    .liquid-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+
+    .gradient-text { 
+        background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+
+    .bg-gradient-yellow { background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); }
+
+    /* Navigation Mobile */
+    #mobile-menu { 
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem;
+    }
+    #mobile-menu.active { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
+    .menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: none; z-index: 90;
+    }
+    .menu-overlay.active { display: block; }
+
+    /* Animations d'affichage */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed w-full z-[60] liquid-glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="labographie.html" class="flex items-center space-x-3">
+            <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                <img src="partner_realisation/logosite.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-black gradient-text tracking-tight">Labographie</span>
+        </a>
+
+        <div class="hidden md:flex space-x-7 font-medium text-sm">
+            <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+            <a href="Services.html" class="text-yellow-500 font-bold">Services</a>
+            <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+            <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+            <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+            <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+            <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="menu-overlay" id="overlay"></div>
+<div id="mobile-menu">
+    <button id="close-menu" class="self-end text-3xl mb-8">&times;</button>
+    <div class="flex flex-col space-y-6 text-xl font-bold">
+        <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+        <a href="Services.html" class="text-yellow-500 font-bold">Services</a>
+        <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+        <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+        <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+        <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+        <a href="Contact.html" class="bg-gradient-yellow text-black px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg font-semibold text-center">
+                Parlons de votre projet
+        </a>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="pt-36 pb-20 px-4 text-center bg-white">
+    <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+        <i class="fas fa-cubes"></i> Nos Services
+    </span>
+    <h1 class="text-5xl md:text-6xl font-black mb-6">Nos <span class="gradient-text">Expertises</span></h1>
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto">Découvrez comment notre double expertise <strong>Laboratoire + Cabinet</strong> propulse votre activité vers le sommet.</p>
+</header>
+
+<!-- SERVICES DÉTAILS -->
+<main class="max-w-7xl mx-auto px-4 py-16 space-y-28">
+
+    <!-- Design & Branding -->
+    <section id="design" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="order-2 lg:order-1">
+            <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-palette"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Design & <span class="gradient-text">Branding</span></h2>
+            <p class="text-gray-500 mb-6">Nous créons bien plus que des logos. Nous forgeons l'identité visuelle qui raconte votre histoire et impose votre présence sur le marché camerounais et international.</p>
+            <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-yellow-500"></i><span>Logotypes originaux et vectoriels</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-yellow-500"></i><span>Chartes graphiques complètes</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-check-circle text-yellow-500"></i><span>Supports de communication (Flyers, Cartes de visite)</span></li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20un%20devis%20pour%20Design%20%26%20Branding" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Demander un devis</a>
+        </div>
+        <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/design2.webp" alt="Design et Branding – Labographie">
+        </div>
+    </section>
+
+    <!-- Développement Web & Mobile -->
+    <section id="developpement" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/programmer-developer-working-on-laptop-600nw-2632604309.webp" alt="Développement Web – Labographie">
+        </div>
+        <div>
+            <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-code"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Développement <span class="gradient-text">Web & Mobile</span></h2>
+            <p class="text-gray-500 mb-6">Des solutions robustes, évolutives et centrées sur l'utilisateur. Nous transformons vos besoins métier en outils digitaux performants.</p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 class="font-bold mb-1">Sites Vitrines</h4>
+                    <p class="text-xs text-gray-500">Présence pro en ligne.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 class="font-bold mb-1">E-commerce</h4>
+                    <p class="text-xs text-gray-500">Vendez vos produits.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 class="font-bold mb-1">Apps Mobiles</h4>
+                    <p class="text-xs text-gray-500">iOS & Android.</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+                    <h4 class="font-bold mb-1">Dashboards</h4>
+                    <p class="text-xs text-gray-500">Interfaces de gestion.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20un%20devis%20Développement%20Web" class="inline-flex items-center gap-2 bg-black text-white px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Lancer mon projet</a>
+        </div>
+    </section>
+
+    <!-- Réseau & Cybersécurité -->
+    <section id="reseau" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="order-2 lg:order-1">
+            <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-shield-alt"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Réseau & <span class="gradient-text">Cybersécurité</span></h2>
+            <p class="text-gray-500 mb-6">Protégez votre actif le plus précieux : vos données. Notre approche Cabinet garantit une infrastructure réseau impénétrable.</p>
+            <div class="space-y-4 mb-8">
+                <div class="flex gap-4 items-start">
+                    <span class="font-black text-yellow-500 text-lg">01.</span>
+                    <p class=""><span class="font-bold">Audit de vulnérabilité :</span> Test approfondi de vos failles actuelles.</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="font-black text-yellow-500 text-lg">02.</span>
+                    <p class=""><span class="font-bold">Configuration Serveur :</span> Installation, déploiement et monitoring 24/7.</p>
+                </div>
+                <div class="flex gap-4 items-start">
+                    <span class="font-black text-yellow-500 text-lg">03.</span>
+                    <p class=""><span class="font-bold">Protection des données :</span> Chiffrement et politique de sauvegarde.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20sécuriser%20mon%20entreprise" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Sécuriser mon entreprise</a>
+        </div>
+        <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/reseau2.jpg" alt="Cybersécurité – Labographie">
+        </div>
+    </section>
+
+    <!-- Marketing Digital -->
+    <section id="marketing" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/online-marketing-facebook.jpg" alt="Marketing Digital – Labographie">
+        </div>
+        <div>
+            <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-bullhorn"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Marketing <span class="gradient-text">Digital</span></h2>
+            <p class="text-gray-500 mb-6">Ne vous contentez pas d'être présent en ligne — soyez dominant. Nous élaborons des stratégies d'acquisition pour transformer vos visiteurs en clients fidèles.</p>
+            <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3"><i class="fas fa-check text-yellow-500"></i><span>SEO & référencement naturel</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-check text-yellow-500"></i><span>Community Management (Facebook, Instagram, LinkedIn)</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-check text-yellow-500"></i><span>Campagnes Google & Facebook Ads</span></li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20booster%20ma%20visibilité%20en%20ligne" class="inline-flex items-center gap-2 bg-black text-white px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Booster ma visibilité</a>
+        </div>
+    </section>
+
+    <!-- Audit & Conseil -->
+    <section id="audit" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="order-2 lg:order-1">
+            <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-chart-line"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Audit & <span class="gradient-text">Conseil</span></h2>
+            <p class="text-gray-500 mb-6">Le Cabinet analyse votre structure actuelle pour identifier les leviers de croissance technologique et vous guider dans votre transformation digitale.</p>
+            <ul class="space-y-3 mb-8">
+                <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500 text-sm font-semibold">Analyse des processus métier</li>
+                <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500 text-sm font-semibold">Recommandations d'outils IT adaptés</li>
+                <li class="bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500 text-sm font-semibold">Feuille de route de transformation digitale</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20un%20audit%20informatique" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Demander un Audit</a>
+        </div>
+        <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/audit-informatique-entreprise.jpeg" alt="Audit et Conseil IT – Labographie">
+        </div>
+    </section>
+
+    <!-- Maintenance IT -->
+    <section id="maintenance" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="equipe_img/maintenance.jpeg" alt="Maintenance IT – Labographie">
+        </div>
+        <div>
+            <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-tools"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Maintenance <span class="gradient-text">IT</span></h2>
+            <p class="text-gray-500 mb-6">Évitez les interruptions coûteuses. Nous assurons l'entretien préventif et l'assistance technique de vos parcs informatiques pour une continuité de service totale.</p>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full text-xs font-bold uppercase">Entretien préventif</span>
+                <span class="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full text-xs font-bold uppercase">Assistance technique</span>
+                <span class="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full text-xs font-bold uppercase">Support 24/7</span>
+                <span class="px-4 py-2 bg-gray-100 border border-gray-200 rounded-full text-xs font-bold uppercase">Réseau & Serveurs</span>
+            </div>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20souscrire%20à%20un%20contrat%20maintenance" class="inline-flex items-center gap-2 border-2 border-black px-7 py-3 rounded-xl font-bold hover:bg-black hover:text-white:bg-white:text-black transition"><i class="fab fa-whatsapp"></i> Souscrire un contrat</a>
+        </div>
+    </section>
+
+    <!-- Coaching Pro -->
+    <section id="coaching" class="grid lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+        <div class="order-2 lg:order-1">
+            <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fas fa-user-tie"></i></div>
+            <h2 class="text-3xl font-bold mb-4">Coaching <span class="gradient-text">Pro</span></h2>
+            <p class="text-gray-500 mb-6">Un accompagnement sur mesure pour les entrepreneurs. Apprenez à maîtriser les outils numériques pour gagner en autonomie et en performance.</p>
+            <ul class="space-y-3 mb-8">
+                <li class="flex items-center gap-3"><i class="fas fa-star text-yellow-500"></i><span class="dark:text-gray-200 font-medium">Coaching personnalisé pour dirigeants</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-star text-yellow-500"></i><span class="dark:text-gray-200 font-medium">Accompagnement aux outils digitaux</span></li>
+                <li class="flex items-center gap-3"><i class="fas fa-star text-yellow-500"></i><span class="dark:text-gray-200 font-medium">Optimisation de la productivité</span></li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20souhaite%20réserver%20une%20session%20coaching" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-7 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-md"><i class="fab fa-whatsapp"></i> Réserver une session</a>
+        </div>
+        <div class="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="Coaching Pro – Labographie">
+        </div>
+    </section>
+</main>
+
+<!-- CTA -->
+<section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto bg-black rounded-3xl p-12 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Prêt à démarrer votre projet ?</h2>
+        <p class="text-gray-400 mb-8 text-lg max-w-xl mx-auto">Contactez-nous dès aujourd'hui et laissez-nous transformer votre idée en réalité.</p>
+        <a href="Contact.html" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-8 py-4 rounded-2xl font-bold text-lg hover:opacity-90 transition shadow-lg">
+            <i class="fas fa-envelope"></i> Nous contacter
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                        <img src="partner_realisation/logosite.jpeg" alt="Logo Labographie" class="w-full h-full ">
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="gradient-text">LaboGraphie</span></span>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">Laboratoire d'innovation & Cabinet informatique basé à Yaoundé. Fais de ton image un empire.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Laboratoire</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#design" class="hover:text-yellow-500 transition-colors">Design Graphique</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Développement Web</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Applications Mobiles</a></li>
+                    <li><a href="Services.html#marketing" class="hover:text-yellow-500 transition-colors">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Cabinet IT</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#audit" class="hover:text-yellow-500 transition-colors">Audit & Conseil</a></li>
+                    <li><a href="Formations.html" class="hover:text-yellow-500 transition-colors">Formations Pro</a></li>
+                    <li><a href="Services.html#maintenance" class="hover:text-yellow-500 transition-colors">Maintenance IT</a></li>
+                    <li><a href="Services.html#reseau" class="hover:text-yellow-500 transition-colors">Infrastructure Réseau</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex gap-3"><i class="fas fa-map-marker-alt text-yellow-500 mt-0.5 text-xs"></i><span>Bastos, Yaoundé, Cameroun</span></li>
+                    <li class="flex gap-3"><i class="fas fa-phone text-yellow-500 mt-0.5 text-xs"></i><span>+237 671 33 90 19</span></li>
+                    <li class="flex gap-3"><i class="fas fa-envelope text-yellow-500 mt-0.5 text-xs"></i><span>contact@labographie.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs">&copy; 2026 <span class="text-yellow-500 font-bold">Labographie</span>. Tous droits réservés.</p>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-yellow-500 transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Gestion du Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Animation au Scroll (Reveal)
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealElements);
+    // Déclencher une fois au chargement
+    window.addEventListener('load', () => {
+        revealElements();
+        // Ajouter la classe 'reveal' dynamiquement aux sections principales si pas déjà fait
+        document.querySelectorAll('section, .card, main > div').forEach(section => {
+            section.classList.add('reveal');
+        });
+    });
+</script>
+</body>
+</html>

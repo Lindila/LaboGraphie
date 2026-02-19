@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labographie | Identité Visuelle, Web & Sécurité – Yaoundé</title>
+    <meta name="description" content="Labographie : laboratoire d'innovation et cabinet informatique basé à Yaoundé. Expert en identité visuelle, développement web/mobile, coaching digital et cybersécurité.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Labographie – Laboratoire & Cabinet Digital">
+    <meta property="og:description" content="Transformez votre vision en réalité digitale avec Labographie, votre partenaire en design, web, marketing et sécurité informatique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labographie.cm/labographie.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    
+    /* Effet Liquid Glass */
+    .liquid-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+
+    .gradient-text { 
+        background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+
+    .bg-gradient-yellow { background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); }
+
+    /* Navigation Mobile */
+    #mobile-menu { 
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem;
+    }
+    #mobile-menu.active { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
+    .menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: none; z-index: 90;
+    }
+    .menu-overlay.active { display: block; }
+
+    /* Animations d'affichage */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- ===== NAV ===== -->
+<nav class="fixed w-full z-[60] liquid-glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="labographie.html" class="flex items-center space-x-3">
+            <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                <img src="partner_realisation/logosite.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-black gradient-text tracking-tight">Labographie</span>
+        </a>
+
+        <div class="hidden md:flex space-x-7 font-medium text-sm">
+            <a href="labographie.html" class="text-yellow-500 font-bold">Accueil</a>
+            <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+            <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+            <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+            <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+            <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+            <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="menu-overlay" id="overlay"></div>
+<div id="mobile-menu">
+    <button id="close-menu" class="self-end text-3xl mb-8">&times;</button>
+    <div class="flex flex-col space-y-6 text-xl font-bold">
+        <a href="labographie.html" class="text-yellow-500 font-bold">Accueil</a>
+        <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+        <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+        <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+        <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+        <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+        <a href="Contact.html" class="bg-gradient-yellow text-black px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg font-semibold text-center">
+                Parlons de votre projet
+        </a>
+    </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="pt-32 pb-20 px-4 text-center bg-white">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            Transformez votre vision en<br>
+            <span class="gradient-text">Réalité Digitale</span>
+        </h1>
+        <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-12">
+            De l'identité visuelle à la sécurité informatique, nous accompagnons votre croissance avec des solutions technologiques de pointe.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="Services.html" class="bg-black text-white px-8 py-4 rounded-xl text-lg font-semibold hover:opacity-90 transition shadow-lg">Découvrir nos services</a>
+            <a href="Realisations.html" class="border-2 border-black px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100:bg-gray-800 transition">Consulter le portfolio</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== EXPERTISE ===== -->
+<main class="max-w-7xl mx-auto px-4 py-20">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                <i class="fas fa-lightbulb"></i> À propos
+            </span>
+            <h2 class="text-4xl font-bold mb-6">L'Expertise au service<br>de la <span class="gradient-text">Croissance</span></h2>
+            <p class="mb-4 text-gray-600">Labographie est née de la volonté de fusionner la créativité d'un <strong>laboratoire</strong> technique avec la rigueur d'un <strong>cabinet</strong> de conseil.</p>
+            <p class="mb-8 text-gray-500">Nous croyons que chaque entreprise mérite une identité visuelle forte, un site web performant et une sécurité informatique sans faille.</p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="border-l-4 border-yellow-500 pl-4">
+                    <span class="block text-4xl font-black">100+</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-widest">Projets Livrés</span>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-4">
+                    <span class="block text-4xl font-black">500+</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-widest">Étudiants Formés</span>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="L'équipe Labographie en action">
+        </div>
+    </div>
+</main>
+
+<!-- ===== SERVICES APERÇU ===== -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="text-center mb-20">
+            <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                <i class="fas fa-cubes"></i> Nos Services
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold">Une double expertise<br><span class="gradient-text">Laboratoire + Cabinet</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- card 1 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Design & Branding</h3>
+                <p class="text-gray-500 mb-6 text-sm">Logos, chartes graphiques et supports qui captivent et convertissent votre audience.</p>
+                <a href="Services.html#design" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- card 2 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Développement Web</h3>
+                <p class="text-gray-500 mb-6 text-sm">Sites vitrines, e-commerce et applications sur mesure performantes et sécurisées.</p>
+                <a href="Services.html#developpement" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- card 3 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Marketing Digital</h3>
+                <p class="text-gray-500 mb-6 text-sm">Stratégies SEO, gestion de réseaux sociaux et campagnes publicitaires percutantes.</p>
+                <a href="Services.html#marketing" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- card 4 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cybersécurité</h3>
+                <p class="text-gray-500 mb-6 text-sm">Audits, tests de pénétration et solutions de protection contre les cybermenaces.</p>
+                <a href="Services.html#reseau" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- card 5 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Formations Pro</h3>
+                <p class="text-gray-500 mb-6 text-sm">Programmes de coaching digital et formation continue adaptés à vos besoins.</p>
+                <a href="Formations.html" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- card 6 -->
+            <div class="group p-8 rounded-3xl bg-white border-2 border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-yellow-500">
+                <div class="w-14 h-14 bg-gray-900 text-yellow-500 rounded-2xl flex items-center justify-center text-xl mb-6 group-hover:bg-gradient-yellow group-hover:text-black transition-all duration-500">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Maintenance IT</h3>
+                <p class="text-gray-500 mb-6 text-sm">Support technique, infrastructure réseau et maintenance préventive.</p>
+                <a href="Services.html#maintenance" class="font-bold flex items-center gap-2 text-yellow-600 group-hover:gap-4 transition-all text-sm">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RÉALISATIONS APERÇU ===== -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                <i class="fas fa-star"></i> Nos Réalisations
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold">Projets qui parlent d'eux-mêmes</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="partner_realisation/petittri.jpeg" alt="Projet Dashboard Analytics" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="partner_realisation/novatech.jpeg" alt="Projet Identité Visuelle Startup" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                    <h3 class="text-white text-xl font-bold mb-1">Identité Visuelle Startup</h3>
+                    <p class="text-gray-300 text-sm mb-3">Création de logo et charte graphique complète</p>
+                    <span class="inline-block px-3 py-1 bg-gradient-yellow text-black rounded-full text-xs font-bold w-fit">Branding</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img src="partner_realisation/candace.jpeg" alt="Projet Plateforme E-commerce" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-14">
+            <a href="Realisations.html" class="inline-block border-2 border-black px-8 py-3 rounded-xl font-bold hover:bg-black hover:text-white:bg-white:text-black transition">Voir tous les projets</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ÉQUIPE ===== -->
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                <i class="fas fa-users"></i> Notre Équipe
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold">Les Talents Derrière Vos Projets</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="text-center group">
+                <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-2xl shadow-xl">
+                    <img src="equipe_img/brinda.jpeg" alt="Funga Brinda – Lead Developer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <h3 class="text-xl font-bold">Funga Brinda</h3>
+                <p class="text-yellow-500 font-semibold">Lead Developer & Sécurité</p>
+            </div>
+            <div class="text-center group">
+                <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-2xl shadow-xl">
+                    <img src="equipe_img/jordy.jpeg" alt="Nde Jordan – UI/UX Designer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <h3 class="text-xl font-bold">Nde Jordan L.</h3>
+                <p class="text-yellow-500 font-semibold">UI/UX Designer</p>
+            </div>
+            <div class="text-center group">
+                <div class="relative w-64 h-64 mx-auto mb-6 overflow-hidden rounded-2xl shadow-xl">
+                    <img src="equipe_img/yvana.jpeg" alt="Yvanna – Consultant Digital" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <h3 class="text-xl font-bold">Yvanna</h3>
+                <p class="text-yellow-500 font-semibold">Consultant Digital & Coach</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-black text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                        <img src="partner_realisation/logosite.jpeg" alt="Logo Labographie" class="w-full h-full ">
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="gradient-text">LaboGraphie</span></span>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">Laboratoire d'innovation & Cabinet informatique basé à Yaoundé. Fais de ton image un empire.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Laboratoire</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#design" class="hover:text-yellow-500 transition-colors">Design Graphique</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Développement Web</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Applications Mobiles</a></li>
+                    <li><a href="Services.html#marketing" class="hover:text-yellow-500 transition-colors">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Cabinet IT</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#audit" class="hover:text-yellow-500 transition-colors">Audit & Conseil</a></li>
+                    <li><a href="Formations.html" class="hover:text-yellow-500 transition-colors">Formations Pro</a></li>
+                    <li><a href="Services.html#maintenance" class="hover:text-yellow-500 transition-colors">Maintenance IT</a></li>
+                    <li><a href="Services.html#reseau" class="hover:text-yellow-500 transition-colors">Infrastructure Réseau</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex gap-3"><i class="fas fa-map-marker-alt text-yellow-500 mt-0.5 text-xs"></i><span>Bastos, Yaoundé, Cameroun</span></li>
+                    <li class="flex gap-3"><i class="fas fa-phone text-yellow-500 mt-0.5 text-xs"></i><span>+237 671 33 90 19</span></li>
+                    <li class="flex gap-3"><i class="fas fa-envelope text-yellow-500 mt-0.5 text-xs"></i><span>contact@labographie.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs">&copy; 2026 <span class="text-yellow-500 font-bold">Labographie</span>. Tous droits réservés.</p>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-yellow-500 transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Gestion du Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Animation au Scroll (Reveal)
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealElements);
+    // Déclencher une fois au chargement
+    window.addEventListener('load', () => {
+        revealElements();
+        // Ajouter la classe 'reveal' dynamiquement aux sections principales si pas déjà fait
+        document.querySelectorAll('section, .card, main > div').forEach(section => {
+            section.classList.add('reveal');
+        });
+    });
+</script>
+</body>
+</html>

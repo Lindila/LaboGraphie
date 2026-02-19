@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations Digitales | Bureautique, UI/UX, Dev Web – Labographie Yaoundé</title>
+    <meta name="description" content="Formations professionnelles proposées par Labographie à Yaoundé : Bureautique, UI/UX Design, Développement Web & Mobile, Community Management et Marketing Digital.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Formations Pro – Labographie">
+    <meta property="og:description" content="Maîtrisez les compétences du futur avec nos formations pratiques en design, développement, marketing et bureautique.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labographie.cm/Formations.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    
+    /* Effet Liquid Glass */
+    .liquid-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+
+    .gradient-text { 
+        background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+
+    .bg-gradient-yellow { background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); }
+
+    /* Navigation Mobile */
+    #mobile-menu { 
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem;
+    }
+    #mobile-menu.active { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
+    .menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: none; z-index: 90;
+    }
+    .menu-overlay.active { display: block; }
+
+    /* Animations d'affichage */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed w-full z-[60] liquid-glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="labographie.html" class="flex items-center space-x-3">
+            <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                <img src="partner_realisation/logosite.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-black gradient-text tracking-tight">Labographie</span>
+        </a>
+
+        <div class="hidden md:flex space-x-7 font-medium text-sm">
+            <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+            <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+            <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+            <a href="Formations.html" class="text-yellow-500 font-bold">Formations</a>
+            <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+            <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+            <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="menu-overlay" id="overlay"></div>
+<div id="mobile-menu">
+    <button id="close-menu" class="self-end text-3xl mb-8">&times;</button>
+    <div class="flex flex-col space-y-6 text-xl font-bold">
+        <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+        <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+        <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+        <a href="Formations.html" class="text-yellow-500 font-bold">Formations</a>
+        <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+        <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+        <a href="Contact.html" class="bg-gradient-yellow text-black px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg font-semibold text-center">
+                Se Former
+        </a>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="pt-36 pb-20 px-4 text-center bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+            <i class="fas fa-graduation-cap"></i> Formations
+        </span>
+        <h1 class="text-5xl md:text-6xl font-black mb-6">Maîtrisez les compétences du <span class="gradient-text">futur</span></h1>
+        <p class="text-lg text-gray-500">Des formations pratiques conçues pour le marché de l'emploi en Cameroun. Transformez votre passion en expertise professionnelle.</p>
+    </div>
+</header>
+
+<!-- FORMATIONS GRILLE -->
+<main class="py-20 max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Bureautique -->
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-yellow-500 transition-all duration-400 group">
+            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-file-alt text-yellow-600 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">Bureautique</h2>
+            <p class="text-gray-500 mb-5 text-sm">Maîtrisez le Pack Office (Word, Excel, PowerPoint) pour booster votre productivité administrative.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Excel Avancé & Tableaux croisés</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Mise en page pro & Présentations</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20Bureautique" class="block text-center border-2 border-yellow-500 text-yellow-600 font-bold py-3 rounded-xl hover:bg-gradient-yellow hover:text-black transition text-sm">Détails de l'offre</a>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-yellow-500 transition-all duration-400 group">
+            <div class="w-14 h-14 bg-gray-900 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-pen-fancy text-yellow-500 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">UI/UX & Design</h2>
+            <p class="text-gray-500 mb-5 text-sm">Apprenez à concevoir des interfaces élégantes et des expériences utilisateurs mémorables avec Figma et Photoshop.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Prototypage interactif Figma</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Psychologie des couleurs & Typographie</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20UI/UX%20Design" class="block text-center border-2 border-yellow-500 text-yellow-600 font-bold py-3 rounded-xl hover:bg-gradient-yellow hover:text-black transition text-sm">Détails de l'offre</a>
+        </div>
+
+        <!-- Dev Web – Popular -->
+        <div class="bg-white p-8 rounded-3xl border-2 border-yellow-500 shadow-lg shadow-yellow-500/10 hover:shadow-2xl transition-all duration-400 relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-yellow text-black text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">⚡ Plus Populaire</div>
+            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-code text-yellow-600 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">Dev Web & Mobile</h2>
+            <p class="text-gray-500 mb-5 text-sm">Devenez développeur Fullstack. Apprenez HTML, CSS, JavaScript, React et Flutter pour créer des applications modernes.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Frontend (Tailwind / React)</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Applications mobiles Android / iOS</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20Dev%20Web%20et%20Mobile" class="block text-center bg-black text-white font-bold py-3 rounded-xl hover:bg-gray-800 transition text-sm shadow-md">Détails de l'offre</a>
+        </div>
+
+        <!-- Community Management -->
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-yellow-500 transition-all duration-400 group">
+            <div class="w-14 h-14 bg-gray-900 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-comments text-yellow-500 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">Community Management</h2>
+            <p class="text-gray-500 mb-5 text-sm">Apprenez à gérer, animer et faire grandir des communautés engagées sur Facebook, Instagram et LinkedIn.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Création de contenu & Planning</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Gestion de crise & E-réputation</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20Community%20Management" class="block text-center border-2 border-yellow-500 text-yellow-600 font-bold py-3 rounded-xl hover:bg-gradient-yellow hover:text-black transition text-sm">Détails de l'offre</a>
+        </div>
+
+        <!-- Marketing Digital -->
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-yellow-500 transition-all duration-400 group">
+            <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-chart-bar text-yellow-600 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">Marketing Digital</h2>
+            <p class="text-gray-500 mb-5 text-sm">Maîtrisez la publicité (Ads), le SEO et l'analyse de données pour maximiser le chiffre d'affaires.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Google & Facebook Ads</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Inbound Marketing & Copywriting</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20Marketing%20Digital" class="block text-center border-2 border-yellow-500 text-yellow-600 font-bold py-3 rounded-xl hover:bg-gradient-yellow hover:text-black transition text-sm">Détails de l'offre</a>
+        </div>
+
+        <!-- Cybersécurité -->
+        <div class="bg-white p-8 rounded-3xl border border-gray-200 hover:shadow-2xl hover:border-yellow-500 transition-all duration-400 group">
+            <div class="w-14 h-14 bg-gray-900 rounded-2xl flex items-center justify-center mb-6">
+                <i class="fas fa-shield-alt text-yellow-500 text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">Cybersécurité</h2>
+            <p class="text-gray-500 mb-5 text-sm">Apprenez les fondamentaux de la sécurité informatique, les tests de pénétration et la protection des données.</p>
+            <ul class="text-sm space-y-2 mb-7 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Audit & Tests de pénétration</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-yellow-500 text-xs"></i> Protection des réseaux & données</li>
+            </ul>
+            <a href="https://wa.me/237671339019?text=Je%20suis%20intéressé%20par%20la%20formation%20Cybersécurité" class="block text-center border-2 border-yellow-500 text-yellow-600 font-bold py-3 rounded-xl hover:bg-gradient-yellow hover:text-black transition text-sm">Détails de l'offre</a>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                        <img src="partner_realisation/logosite.jpeg" alt="Logo Labographie" class="w-full h-full ">
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="gradient-text">LaboGraphie</span></span>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">Laboratoire d'innovation & Cabinet informatique basé à Yaoundé. Fais de ton image un empire.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Laboratoire</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#design" class="hover:text-yellow-500 transition-colors">Design Graphique</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Développement Web</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Applications Mobiles</a></li>
+                    <li><a href="Services.html#marketing" class="hover:text-yellow-500 transition-colors">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Cabinet IT</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#audit" class="hover:text-yellow-500 transition-colors">Audit & Conseil</a></li>
+                    <li><a href="Formations.html" class="hover:text-yellow-500 transition-colors">Formations Pro</a></li>
+                    <li><a href="Services.html#maintenance" class="hover:text-yellow-500 transition-colors">Maintenance IT</a></li>
+                    <li><a href="Services.html#reseau" class="hover:text-yellow-500 transition-colors">Infrastructure Réseau</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex gap-3"><i class="fas fa-map-marker-alt text-yellow-500 mt-0.5 text-xs"></i><span>Bastos, Yaoundé, Cameroun</span></li>
+                    <li class="flex gap-3"><i class="fas fa-phone text-yellow-500 mt-0.5 text-xs"></i><span>+237 671 33 90 19</span></li>
+                    <li class="flex gap-3"><i class="fas fa-envelope text-yellow-500 mt-0.5 text-xs"></i><span>contact@labographie.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs">&copy; 2026 <span class="text-yellow-500 font-bold">Labographie</span>. Tous droits réservés.</p>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-yellow-500 transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Gestion du Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Animation au Scroll (Reveal)
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealElements);
+    // Déclencher une fois au chargement
+    window.addEventListener('load', () => {
+        revealElements();
+        // Ajouter la classe 'reveal' dynamiquement aux sections principales si pas déjà fait
+        document.querySelectorAll('section, .card, main > div').forEach(section => {
+            section.classList.add('reveal');
+        });
+    });
+</script>
+</body>
+</html>

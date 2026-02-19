@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Clients & Témoignages | Labographie – Yaoundé</title>
+    <meta name="description" content="Plus de 50 entreprises confient leur transformation digitale à Labographie. Découvrez les témoignages de nos clients satisfaits à Yaoundé et au Cameroun.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Nos Clients – Labographie">
+    <meta property="og:description" content="Témoignages et retours d'expérience de nos clients entreprises en Cameroun.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labographie.cm/Clients.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    
+    /* Effet Liquid Glass */
+    .liquid-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+
+    .gradient-text { 
+        background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+
+    .bg-gradient-yellow { background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); }
+
+    /* Navigation Mobile */
+    #mobile-menu { 
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem;
+    }
+    #mobile-menu.active { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
+    .menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: none; z-index: 90;
+    }
+    .menu-overlay.active { display: block; }
+
+    /* Animations d'affichage */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed w-full z-[60] liquid-glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="labographie.html" class="flex items-center space-x-3">
+            <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                <img src="partner_realisation/logosite.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-black gradient-text tracking-tight">Labographie</span>
+        </a>
+
+        <div class="hidden md:flex space-x-7 font-medium text-sm">
+            <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+            <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+            <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+            <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+            <a href="Clients.html" class="text-yellow-500 font-bold">Clients</a>
+            <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+            <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+    
+<div class="menu-overlay" id="overlay"></div>
+<div id="mobile-menu">
+    <button id="close-menu" class="self-end text-3xl mb-8">&times;</button>
+    <div class="flex flex-col space-y-6 text-xl font-bold">
+        <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+        <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+        <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+        <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+        <a href="Contact.html" class="hover:text-yellow-500 transition">Contact</a>
+        <a href="Clients.html" class="text-yellow-500 font-bold">Clients</a>
+        <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+        <a href="Contact.html" class="bg-gradient-yellow text-black px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg font-semibold text-center">
+                Parlons de votre projet
+        </a>
+    </div>
+</div>
+        
+
+
+<!-- HERO -->
+<header class="pt-36 pb-16 px-4 text-center bg-white">
+    <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+        <i class="fas fa-handshake"></i> Nos Clients
+    </span>
+    <h1 class="text-5xl md:text-6xl font-black mb-6">Votre succès, notre <span class="gradient-text">priorité</span></h1>
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto">Plus de 50 entreprises nous font confiance pour leur transformation digitale au Cameroun et à l'international.</p>
+</header>
+
+<!-- LOGOS CLIENTS -->
+<section class="pb-16 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div>
+            <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Ils nous font confiance</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 items-center">
+                <img src="partner_realisation/expertise.jpeg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/initiative.jpeg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/epfl.jpeg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/novatech.jpeg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/golden_touch.jpg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/crystallus.jpg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/theo_fils.jpg" class="h-13 mx-auto duration-500">
+                <img src="partner_realisation/petittri.jpeg" class="h-13 mx-auto duration-500">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6">
+            <div class="max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Paroles d'experts<br>et d'<span class="gradient-text">entrepreneurs</span></h2>
+                <p class="text-gray-500">Le retour de nos clients est la meilleure preuve de la qualité de nos prestations.</p>
+            </div>
+            <div class="flex items-center gap-2 bg-white border border-gray-200 px-5 py-2.5 rounded-full shadow-sm">
+                <span class="text-yellow-500 font-black text-lg">4.9</span>
+                <span class="text-gray-400 text-sm">/5</span>
+                <div class="flex text-yellow-400 text-sm ml-1">★★★★★</div>
+                <span class="text-gray-400 text-xs ml-1">(120+ avis)</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Témoignage 1 -->
+            <div class="testimonial-card p-8 rounded-3xl bg-white border border-gray-200 hover:border-yellow-500">
+                <div class="text-yellow-500 text-5xl font-black leading-none mb-4">"</div>
+                <p class="text-gray-600 mb-6 leading-relaxed text-sm">Labographie a transformé notre infrastructure réseau vieillissante en un système moderne et sécurisé. Leur double approche laboratoire + cabinet nous a apporté innovation et fiabilité.</p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                    <p class="bg-gray-900 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">TS</p>
+                    <div>
+                        <h4 class="font-bold">Tech Solutions SARL</h4>
+                        <p class="text-xs text-yellow-500 font-semibold">Client depuis 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="testimonial-card p-8 rounded-3xl bg-white border border-gray-200 hover:border-yellow-500 lg:translate-y-4">
+                <div class="text-yellow-500 text-5xl font-black leading-none mb-4">"</div>
+                <p class="text-gray-600 mb-6 leading-relaxed text-sm">Notre site e-commerce génère maintenant 3x plus de ventes. Le design est superbe et l'expérience utilisateur fluide. L'équipe est réactive et professionnelle.</p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                    <p class="bg-yellow-500 text-black w-12 h-12 rounded-full flex items-center justify-center font-bold">TF</p>
+                    <div>
+                        <h4 class="font-bold">Théo&Fils Shopping.</h4>
+                        <p class="text-xs text-yellow-500 font-semibold">E-commerce - 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="testimonial-card p-8 rounded-3xl bg-white border border-gray-200 hover:border-yellow-500">
+                <div class="text-yellow-500 text-5xl font-black leading-none mb-4">"</div>
+                <p class="text-gray-600 mb-6 leading-relaxed text-sm">Nous avons formé 15 de nos employés avec Labographie. Programme sur mesure, formateurs compétents, résultats concrets. Nos équipes sont maintenant autonomes.</p>
+                <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
+                    <p class="bg-gray-900 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">ED</p>
+                    <div>
+                        <h4 class="font-bold">École Digitale</h4>
+                        <p class="text-xs text-yellow-500 font-semibold">Formation - 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto bg-black rounded-3xl p-12 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Prêt à rejoindre nos clients satisfaits ?</h2>
+        <p class="text-gray-400 mb-8 text-lg max-w-xl mx-auto">Discutons de votre projet dès aujourd'hui et trouvons la solution adaptée à votre budget.</p>
+        <a href="https://wa.me/237671339019" class="inline-flex items-center gap-2 bg-gradient-yellow text-black px-8 py-4 rounded-2xl font-bold text-lg hover:opacity-90 transition shadow-lg">
+            <i class="fab fa-whatsapp"></i> Prendre rendez-vous
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                        <img src="partner_realisation/logosite.jpeg" alt="Logo Labographie" class="w-full h-full ">
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="gradient-text">LaboGraphie</span></span>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">Laboratoire d'innovation & Cabinet informatique basé à Yaoundé. Fais de ton image un empire.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Laboratoire</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#design" class="hover:text-yellow-500 transition-colors">Design Graphique</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Développement Web</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Applications Mobiles</a></li>
+                    <li><a href="Services.html#marketing" class="hover:text-yellow-500 transition-colors">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Cabinet IT</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#audit" class="hover:text-yellow-500 transition-colors">Audit & Conseil</a></li>
+                    <li><a href="Formations.html" class="hover:text-yellow-500 transition-colors">Formations Pro</a></li>
+                    <li><a href="Services.html#maintenance" class="hover:text-yellow-500 transition-colors">Maintenance IT</a></li>
+                    <li><a href="Services.html#reseau" class="hover:text-yellow-500 transition-colors">Infrastructure Réseau</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex gap-3"><i class="fas fa-map-marker-alt text-yellow-500 mt-0.5 text-xs"></i><span>Bastos, Yaoundé, Cameroun</span></li>
+                    <li class="flex gap-3"><i class="fas fa-phone text-yellow-500 mt-0.5 text-xs"></i><span>+237 671 33 90 19</span></li>
+                    <li class="flex gap-3"><i class="fas fa-envelope text-yellow-500 mt-0.5 text-xs"></i><span>contact@labographie.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs">&copy; 2026 <span class="text-yellow-500 font-bold">Labographie</span>. Tous droits réservés.</p>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-yellow-500 transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Gestion du Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Animation au Scroll (Reveal)
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealElements);
+    // Déclencher une fois au chargement
+    window.addEventListener('load', () => {
+        revealElements();
+        // Ajouter la classe 'reveal' dynamiquement aux sections principales si pas déjà fait
+        document.querySelectorAll('section, .card, main > div').forEach(section => {
+            section.classList.add('reveal');
+        });
+    });
+</script>
+</body>
+</html>

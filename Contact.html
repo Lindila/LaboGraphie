@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | Labographie – Yaoundé, Cameroun</title>
+    <meta name="description" content="Contactez Labographie à Yaoundé. Envoyez votre message via WhatsApp ou email. Notre équipe répond en moins de 24h pour discuter de votre projet digital.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact – Labographie">
+    <meta property="og:description" content="Une question ou un projet ? Contactez Labographie, votre agence digitale à Yaoundé.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labographie.cm/Contact.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    
+    /* Effet Liquid Glass */
+    .liquid-glass {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(12px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    }
+
+    .gradient-text { 
+        background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+    }
+
+    .bg-gradient-yellow { background: linear-gradient(135deg, #FFD700 0%, #FFC000 100%); }
+
+    /* Navigation Mobile */
+    #mobile-menu { 
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem;
+    }
+    #mobile-menu.active { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
+    .menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: none; z-index: 90;
+    }
+    .menu-overlay.active { display: block; }
+
+    /* Animations d'affichage */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- NAV -->
+<nav class="fixed w-full z-[60] liquid-glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="labographie.html" class="flex items-center space-x-3">
+            <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                <img src="partner_realisation/logosite.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <span class="text-2xl font-black gradient-text tracking-tight">Labographie</span>
+        </a>
+
+        <div class="hidden md:flex space-x-7 font-medium text-sm">
+            <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+            <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+            <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+            <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+            <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+            <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+            <a href="Contact.html" class="text-yellow-500 font-bold">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<div class="menu-overlay" id="overlay"></div>
+<div id="mobile-menu">
+    <button id="close-menu" class="self-end text-3xl mb-8">&times;</button>
+    <div class="flex flex-col space-y-6 text-xl font-bold">
+        <a href="labographie.html" class="hover:text-yellow-500 transition">Accueil</a>
+        <a href="Services.html" class="hover:text-yellow-500 transition">Services</a>
+        <a href="Realisations.html" class="hover:text-yellow-500 transition">Réalisations</a>
+        <a href="Formations.html" class="hover:text-yellow-500 transition">Formations</a>
+        <a href="Contact.html" class="text-yellow-500 font-bold">Contact</a>
+        <a href="Clients.html" class="hover:text-yellow-500 transition">Clients</a>
+        <a href="Partenaires.html" class="hover:text-yellow-500 transition">Partenaires</a>
+        <a href="Contact.html" class="bg-gradient-yellow text-black px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg font-semibold text-center">
+                Parlons de votre projet
+        </a>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="pt-36 pb-12 px-4 text-center bg-white">
+    <span class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-yellow text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+        <i class="fas fa-envelope"></i> Contact
+    </span>
+    <h1 class="text-5xl md:text-6xl font-black mb-4">Parlons de votre <span class="gradient-text">Projet</span></h1>
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto">Une question ? Un projet urgent ? Notre équipe est prête à vous répondre en moins de 24h.</p>
+</header>
+
+<!-- CORPS -->
+<main class="max-w-7xl mx-auto px-4 py-12 pb-24">
+    <div class="grid lg:grid-cols-3 gap-12">
+
+        <!-- Coordonnées -->
+        <div class="lg:col-span-1 space-y-6">
+            <div class="bg-gray-50 p-8 rounded-3xl border border-gray-200">
+                <h3 class="text-xl font-bold mb-6">Nos <span class="gradient-text">Coordonnées</span></h3>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gradient-yellow text-black rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest">Téléphone / WhatsApp</p>
+                            <p class="font-bold">+237 671 33 90 19</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-black text-yellow-500 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest">Email</p>
+                            <p class="font-bold">contact@labographie.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-gradient-yellow text-black rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest">Localisation</p>
+                            <p class="font-bold">Bastos, Yaoundé, Cameroun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Suivez-nous</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:border-yellow-500 hover:text-black transition text-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:border-yellow-500 hover:text-black transition text-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:border-yellow-500 hover:text-black transition text-sm"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horaires -->
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                <h4 class="font-bold mb-4 flex items-center gap-2"><i class="fas fa-clock text-yellow-500"></i> Horaires</h4>
+                <div class="space-y-2 text-sm text-gray-500">
+                    <div class="flex justify-between"><span>Lundi – Vendredi</span><span class="font-semibold">08h – 18h</span></div>
+                    <div class="flex justify-between"><span>Samedi</span><span class="font-semibold">09h – 13h</span></div>
+                    <div class="flex justify-between"><span>Dimanche</span><span class="text-gray-400">Fermé</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="lg:col-span-2">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl shadow-gray-100/50 border border-gray-100">
+                <h3 class="text-xl font-bold mb-6">Envoyez-nous un <span class="gradient-text">message</span></h3>
+                <div id="contact-form" class="space-y-5">
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold mb-2 text-gray-500 uppercase tracking-widest">Nom complet</label>
+                            <input type="text" id="user-name" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 transition text-sm" placeholder="Ex : Jean Dupont">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-2 text-gray-500 uppercase tracking-widest">Service souhaité</label>
+                            <select id="user-service" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 transition text-sm">
+                                <option>Design & Branding</option>
+                                <option>Développement Web / Mobile</option>
+                                <option>Marketing Digital</option>
+                                <option>Cybersécurité & Maintenance</option>
+                                <option>Formations Pro</option>
+                                <option>Audit & Conseil IT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2 text-gray-500 uppercase tracking-widest">Votre email</label>
+                        <input type="email" id="user-email" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 transition text-sm" placeholder="votre@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2 text-gray-500 uppercase tracking-widest">Votre Message</label>
+                        <textarea id="user-message" rows="5" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3.5 transition text-sm resize-none" placeholder="Décrivez votre projet en détail…"></textarea>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <button onclick="sendWhatsApp()" class="w-full bg-gradient-yellow text-black font-bold py-4 rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-md text-sm">
+                            <i class="fab fa-whatsapp text-lg"></i> Envoyer via WhatsApp
+                        </button>
+                        <button onclick="sendEmail()" class="w-full bg-black text-white font-bold py-4 rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-3 shadow-md text-sm">
+                            <i class="fas fa-envelope text-lg"></i> Envoyer par Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 overflow-hidden rounded-lg shadow-lg">
+                        <img src="partner_realisation/logosite.jpeg" alt="Logo Labographie" class="w-full h-full ">
+                    </div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="gradient-text">LaboGraphie</span></span>
+                </div>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm">Laboratoire d'innovation & Cabinet informatique basé à Yaoundé. Fais de ton image un empire.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-yellow hover:text-black transition-all hover:-translate-y-1 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Laboratoire</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#design" class="hover:text-yellow-500 transition-colors">Design Graphique</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Développement Web</a></li>
+                    <li><a href="Services.html#developpement" class="hover:text-yellow-500 transition-colors">Applications Mobiles</a></li>
+                    <li><a href="Services.html#marketing" class="hover:text-yellow-500 transition-colors">Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6 flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Cabinet IT</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li><a href="Services.html#audit" class="hover:text-yellow-500 transition-colors">Audit & Conseil</a></li>
+                    <li><a href="Formations.html" class="hover:text-yellow-500 transition-colors">Formations Pro</a></li>
+                    <li><a href="Services.html#maintenance" class="hover:text-yellow-500 transition-colors">Maintenance IT</a></li>
+                    <li><a href="Services.html#reseau" class="hover:text-yellow-500 transition-colors">Infrastructure Réseau</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-base mb-6">Contact</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex gap-3"><i class="fas fa-map-marker-alt text-yellow-500 mt-0.5 text-xs"></i><span>Bastos, Yaoundé, Cameroun</span></li>
+                    <li class="flex gap-3"><i class="fas fa-phone text-yellow-500 mt-0.5 text-xs"></i><span>+237 671 33 90 19</span></li>
+                    <li class="flex gap-3"><i class="fas fa-envelope text-yellow-500 mt-0.5 text-xs"></i><span>contact@labographie.com</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-500 text-xs">&copy; 2026 <span class="text-yellow-500 font-bold">Labographie</span>. Tous droits réservés.</p>
+            <div class="flex gap-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-yellow-500 transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors">Politique de Confidentialité</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Gestion du Menu Mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    // Animation au Scroll (Reveal)
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealElements);
+    // Déclencher une fois au chargement
+    window.addEventListener('load', () => {
+        revealElements();
+        // Ajouter la classe 'reveal' dynamiquement aux sections principales si pas déjà fait
+        document.querySelectorAll('section, .card, main > div').forEach(section => {
+            section.classList.add('reveal');
+        });
+    });
+</script>
+</body>
+</html>
